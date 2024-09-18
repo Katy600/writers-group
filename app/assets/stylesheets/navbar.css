@@ -1,0 +1,121 @@
+body::after {
+    content:'';      background:url(writing-paper.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100%;
+    background-attachment: fixed;
+    position: absolute;
+    opacity: .5;
+    z-index: -1;
+}
+
+.brand-logo {
+    font-family: 'Roboto', monospace;
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 1px 1px 1px #004d40;
+    font-size: 2rem;
+}
+
+.brand-logo span {
+    font-size: 3rem;
+    font-family: 'Courgette', cursive;
+    text-shadow: 0 0 5px #f48fb1;
+    color: #fff;
+    margin-left: -5px;
+    margin-right: -10px;
+}
+
+.menuli-adel {
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-left: -5px;
+}
+
+.menuli-adel:hover {
+    background: #f48fb1 !important;
+    color: #fff !important;
+}
+
+.menuli-adel:active {
+    border-bottom: 1px solid #009688;
+}
+
+
+
+.menuli-side:hover {
+    background: #b39ddb !important;
+    color: #fff !important;
+}
+
+.menuli-side:active {
+    border-bottom: 1px solid #009688;
+}
+
+.card-image p {
+    font-size: 10px;
+    font-family: 'Courgette', cursive;
+    position: relative;
+    top: 10%;
+    left: 45%;
+    margin-bottom: 2rem;
+}
+
+.sidemenu-title {
+    margin-left: 25px;
+}
+
+.card {
+    margin-top: 3vh;
+}
+
+
+
+/*nav ul {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    list-style: none;*/
+/*}*/
+
+/*nav li {*/
+/*    display: inline-block;*/
+/*    margin-left: 70px;*/
+/*    padding-top: 35px;*/
+/*}*/
+
+/*nav a {*/
+/*    color: #800080;*/
+/*    text-decoration: none;*/
+/*    text-transform: uppercase;*/
+/*    font-size: 18px;*/
+/*}*/
+
+/*.container {*/
+/*    background: #008080;*/
+/*    color: #ffffff;*/
+/*    align-items: center;*/
+/*    display: flex;*/
+/*    *justify-content: center;*/
+/*    *align-items: center;*/
+/*    height: 15vh;*/
+/*}*/
+
+/*nav a:hover {*/
+/*    color: #ff00ff;*/
+/*}*/
+
+/*img {*/
+/*    width: 200px;*/
+/*    height: auto; !* Automatically adjusts height to maintain aspect ratio *!*/
+/*}*/
+
+/*div {*/
+/*    display: flex;*/
+/*    justify-content: center; !* Horizontally centers the list *!*/
+/*    align-items: center; !* Vertically centers the list (if needed) *!*/
+/*    height: 100vh; !* Optional: If you want to center vertically as well *!*/
+/*}*/
+

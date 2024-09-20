@@ -71,5 +71,6 @@ group :test do
   gem "selenium-webdriver"
   gem 'factory_bot_rails'
   gem 'database_cleaner-active_record'
-
+  gem 'cucumber-rails'
+  gem 'webdrivers'
 end

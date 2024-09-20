@@ -9,7 +9,7 @@ end
 Then('I should be on the {string} page') do |page_name|
   case page_name
   when "Start Writing"
-    expect(page).to have_current_path( writing_outlet_path) # replace with actual path
+    expect(page).to have_current_path( new_writing_outlet_path) # replace with actual path
     # Add other pages as needed
   else
     raise "Path for #{page_name} not defined"

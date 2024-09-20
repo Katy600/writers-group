@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   # If you still want to keep the custom route as well:
   get 'writing_outlet', to: 'writing_outlet#index'
+  resources :writing_outlet
 end

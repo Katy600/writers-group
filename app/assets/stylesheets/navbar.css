@@ -1,76 +1,176 @@
-body::after {
-    content:'';      background:url(writing-paper.png);
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins','Open Sans',Arial;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(writing-paper.png);
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-    width: 100vw;
-    height: 100%;
-    background-attachment: fixed;
-    position: absolute;
-    opacity: .5;
-    z-index: -1;
 }
 
-.brand-logo {
-    font-family: 'Roboto', monospace;
-    font-weight: 700;
-    font-style: italic;
-    text-shadow: 1px 1px 1px #004d40;
-    font-size: 2rem;
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 1.5rem;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
-.brand-logo span {
-    font-size: 3rem;
-    font-family: 'Courgette', cursive;
-    text-shadow: 0 0 5px #f48fb1;
-    color: #fff;
-    margin-left: -5px;
-    margin-right: -10px;
-}
-
-.menuli-adel {
-    font-family: 'Roboto Mono', monospace;
+.logo {
+    color: aliceblue;
+    font-weight: bold;
     text-transform: uppercase;
-    font-size: 2rem;
-    margin-left: -5px;
+    font-size: 1.7rem;
+    margin-left: 12px;
+    cursor: pointer;
 }
 
-.menuli-adel:hover {
-    background: #f48fb1 !important;
-    color: #fff !important;
+.fas {
+    color: white;
+    font-size: 1.25rem;
+    cursor: pointer;
 }
 
-.menuli-adel:active {
-    border-bottom: 1px solid #009688;
+.list-nav-bar {
+    list-style: none;
+    text-transform: uppercase;
+    display: flex;
+    gap: 20px;
+}
+
+.list-item a {
+    cursor: pointer;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin-left: 0.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.list-item a:hover {
+    color: rgb(12, 124, 255);
+}
+
+.burger-menu {
+    display: none;
+}
+
+.main-content {
+    text-align: center;
+    margin-top: 25vh;
+}
+
+.main-content h1 {
+    color: #0c7cff;
+    font-size: 3.5rem;
 }
 
 
+@media screen and (max-width: 768px) {
 
-.menuli-side:hover {
-    background: #b39ddb !important;
-    color: #fff !important;
+    .list-item a {
+        font-size: 2rem;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
 }
 
-.menuli-side:active {
-    border-bottom: 1px solid #009688;
+@media screen and (max-width: 578px) {
+
+    .list-item a {
+        font-size: 2rem;
+
+    }
+
+    .list-nav-bar.active {
+        right: 0;
+    }
+
+    .list-nav-bar {
+        display: flex;
+        position: fixed;
+        right: -100%;
+        top: 60px;
+        width: 40%;
+        background-color: rgba(0, 0, 0, 0.4);
+        text-align: center;
+        flex-direction: column;
+        transition: 0.7s;
+        gap: 18px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    /*.burger-menu {*/
+    /*    display: block;*/
+    /*    cursor: pointer;*/
+    /*}*/
 }
 
-.card-image p {
-    font-size: 10px;
-    font-family: 'Courgette', cursive;
-    position: relative;
-    top: 10%;
-    left: 45%;
-    margin-bottom: 2rem;
-}
 
-.sidemenu-title {
-    margin-left: 25px;
-}
+/*.brand-logo {*/
+/*    font-family: Tate regular, Arial, Helvetica, Neue, Helvetica, sans-serif;*/
+/*    font-weight: 700;*/
+/*    font-style: italic;*/
+/*    text-shadow: 1px 1px 1px #004d40;*/
+/*    font-size: 2rem;*/
+/*}*/
 
-.card {
-    margin-top: 3vh;
-}
+/*.brand-logo span {*/
+/*    font-size: 3rem;*/
+/*    font-family: Tate regular, Arial, Helvetica, Neue, Helvetica, sans-serif;*/
+/*    text-shadow: 0 0 5px #072750;*/
+/*    color: #ea0e0e;*/
+/*    margin-left: -5px;*/
+/*    margin-right: -10px;*/
+/*}*/
+
+/*.menuli-adel {*/
+/*    font-family: 'Tate regular', 'Arial', 'Helvetica', 'Neue', 'Helvetica', 'sans-serif';*/
+/*    text-transform: uppercase;*/
+/*    font-size: 3rem;*/
+/*    margin-left: -6px;*/
+/*}*/
+
+/*.menuli-adel:hover {*/
+/*    background: #6626e0 !important;*/
+/*    color: #fff !important;*/
+/*}*/
+
+/*.menuli-side:active {*/
+/*    border-bottom: 1px solid #009688;*/
+/*}*/
+
+/*.card-image p {*/
+/*    font-size: 10px;*/
+/*    font-family: 'Courgette', cursive;*/
+/*    position: relative;*/
+/*    top: 10%;*/
+/*    left: 45%;*/
+/*    margin-bottom: 2rem;*/
+/*}*/
+
+/*.sidemenu-title {*/
+/*    margin-left: 25px;*/
+/*}*/
+
+/*.card {*/
+/*    margin-top: 3vh;*/
+/*}*/
 
 
 

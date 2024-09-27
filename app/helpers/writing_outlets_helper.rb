@@ -1,0 +1,2 @@
+module WritingOutletsHelper
+end

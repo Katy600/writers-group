@@ -1,5 +1,4 @@
-# frozen_string_literal: true
-
-class WritingOutlet
-
+class WritingOutlet < ApplicationRecord
+  validates :title, presence: true, length: { maximum: 255 }
+  validates :content, presence: true
 end

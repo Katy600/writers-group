@@ -12,14 +12,19 @@ RSpec.describe "WritingOutlets", type: :request do
     context "with valid parameters" do
       it "creates a new writing outlet" do
         expect {
-          post writing_outlet_url, params: { writing_outlet: valid_attributes }
+          post writing_outlets_url, params: { writing_outlet: { title: "My Title", content: "Some Content" } }
         }.to change(WritingOutlet, :count).by(1)
       end
 
-      it "redirects to the created article" do
-        post writing_outlet_url, params: { writing_outlet: valid_attributes }
-        expect(response).to redirect_to(writing_outlet_url(WritingOutlet.last))
+      it "redirects to the created piece of writing" do
+        post writing_outlets_url, params: { writing_outlet: { title: "My Title", content: "Some Content" } }
+        expect(response).to redirect_to(writing_outlet_path(WritingOutlet.last))
       end
     end
   end
+
+  # describe "GET /show" do
+  #   it "displays "
+  #
+  # end
 end

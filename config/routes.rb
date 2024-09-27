@@ -1,8 +1,8 @@
+# config/routes.rb
 Rails.application.routes.draw do
-  # Defines the root path route ("/")
-  root "writing_outlet#index"  # Define root properly
+  # Define the root path route ("/")
+  root "writing_outlets#index"  # Set the index action as the root
 
-  # If you still want to keep the custom route as well:
-  get 'writing_outlet', to: 'writing_outlet#index'
-  resources :writing_outlet
+  # Use RESTful routes to automatically generate all necessary routes for WritingOutlets
+  resources :writing_outlets
 end

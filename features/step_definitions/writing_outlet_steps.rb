@@ -1,10 +1,10 @@
 
-Given('I am on the writing outlet page') do
-  new_writing_outlet_path
+Given("I am on the new writing outlet page") do
+  visit new_writing_outlet_path  # or the correct path to your form
 end
 
 When('I fill in {string} with {string}') do |field, value|
-  fill_in field, with: value
+  fill_in field, with: value, visible: :all
 end
 
 When('I press {string}') do |button|

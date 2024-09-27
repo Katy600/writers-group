@@ -13,20 +13,20 @@
 }
 
 .left-half-form label {
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-family: system-ui;
     font-weight: bold;
 }
 
 .left-half-form .form-group {
     margin-bottom: 15px;
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-family: system-ui;
 }
 
 .left-half-form .form-control {
     width: 100%; /* Ensures input fields take full width of the form */
     padding: 10px; /* Adds padding inside input fields */
-    font-size: 16px; /* Increases font size for better readability */
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 20px; /* Increases font size for better readability */
+    font-family: system-ui;
 }
 
 /*.right-side-content {*/
@@ -47,7 +47,7 @@
 }
 
 .left-half-form .form-control {
-    font-size: 16px; /* Font size for input fields */
+    font-size: 25px; /* Font size for input fields */
     padding: 10px; /* Adds padding inside the input and textarea fields */
 }
 
@@ -63,7 +63,7 @@
     align-items: center;
     width: 50%;
     font-size: 30px;
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-family: system-ui;
 
     box-shadow: 0 4px 12px 0 #ffcd57;
     transition: all 0.5s ease;

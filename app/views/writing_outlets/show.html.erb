@@ -1,5 +1,5 @@
-<h1>WritingOutlets#show</h1>
-<p>Find me in app/views/writing_outlets/show.html.erb</p>
 
-- <p><%=  @writing_outlet.title %></p>
-+ <p><%= link_to  @writing_outlet.content %></p>
+<div class='paper'>
+  <h1><%= @writing_outlet.title %> </h1>
+  <p><%= @writing_outlet.content %> </p>
+</div>

@@ -1,10 +1,10 @@
 class WritingOutletsController < ApplicationController
   before_action :set_writing_outlet, only: %i[show edit update destroy]
   def index
+    @writing_outlet = WritingOutlet.all
   end
 
   def show
-
   end
 
   def new
@@ -28,6 +28,10 @@ class WritingOutletsController < ApplicationController
   end
 
   def destroy
+  end
+
+  def home
+
   end
 
   private

@@ -1,3 +1,5 @@
-Feature: View all writing
-  Scenario: Views all their writing so far
+Feature: View writing on the index page
+  Scenario: User views writing on the index page
+    Given there are multiple writing outlets
     Given I am on the "index writing outlets" page
+    Then I should see a list of writing outlets

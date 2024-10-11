@@ -21,6 +21,31 @@ RSpec.describe "WritingOutlets", type: :request do
         expect(response).to redirect_to(writing_outlet_path(WritingOutlet.last))
       end
     end
+
+    context "with no title" do
+      before do
+        post writing_outlets_url, params: { writing_outlet: { title: "", content: "Some Content" } }
+      end
+
+      it "does not create a new writing outlet" do
+        expect {
+          post writing_outlets_url, params: { writing_outlet: { title: "", content: "Some Content" } }
+        }.to change(WritingOutlet, :count).by(0)
+      end
+
+      it 'renders the new template' do
+        expect(response).to render_template(:new) # Expect to render the 'new' template
+      end
+    end
+
+
+    context "with no content" do
+      it "does not create a new writing outlet" do
+        expect {
+          post writing_outlets_url, params: { writing_outlet: { title: "My Title", content: "" } }
+        }.to change(WritingOutlet, :count).by(0)
+      end
+    end
   end
 
   describe "GET /show" do

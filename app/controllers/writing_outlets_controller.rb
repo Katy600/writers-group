@@ -19,7 +19,7 @@ class WritingOutletsController < ApplicationController
     if @writing_outlet.save
       redirect_to writing_outlet_path(@writing_outlet), notice: 'Writing outlet was successfully created'
     else
-      render :new
+      render :new # Render the new template if it fails
     end
   end
 

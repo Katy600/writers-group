@@ -23,8 +23,22 @@ RSpec.describe "WritingOutlets", type: :request do
     end
   end
 
-  # describe "GET /show" do
-  #   it "displays "
-  #
-  # end
+  describe "GET /show" do
+    before do
+      WritingOutlet.create(title: "First Post", content: "This is the first post")
+      WritingOutlet.create(title: "Second Post", content: "This is the second post")
+      WritingOutlet.create(title: "Third Post", content: "This is the third post")
+      WritingOutlet.create(title: "Fourth Post", content: "This is the fourth post")
+    end
+
+    context "with valid parameters" do
+      it "displays the recent writing outlet" do
+        writing_outlet = JSON.parse(response.body)
+        expect(response).to be_successful
+        expect(writing_outlet["title"]).to eq('My Title')
+        expect(writing_outlet["content"]).to eq('Some Content')
+
+      end
+    end
+  end
 end

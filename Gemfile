@@ -3,6 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.3.5"
 
+gem 'bigdecimal'
+
+gem 'ostruct'
+
+gem 'mutex_m'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.8", ">= 7.0.8.4"
 
@@ -71,7 +77,8 @@ group :test do
   gem 'database_cleaner-active_record'
   gem 'webdrivers'
   gem 'cucumber', '~> 3.1' # Adjust to a compatible version
-  gem 'cucumber-rails', '~> 2.1' # Use the latest stable version
+  gem 'cucumber-rails', require: false
   gem 'launchy'
   gem 'pg', '~> 1.2'
+  gem 'rails-controller-testing'
 end

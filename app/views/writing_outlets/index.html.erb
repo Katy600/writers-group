@@ -1,2 +1,32 @@
-<h1></h1>
+<h1>Your writing outlets so far...</h1>
 
+<% if @writing_outlets.any? %>
+  <ul class="level1">
+    <% @writing_outlets.each do |outlet| %>
+      <li>
+        <table>
+          <tr>
+            <th><%= outlet.title %></th>
+          </tr>
+          <td>
+            <%= outlet.content %>
+          </td>
+        </table>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<!--<table>-->
+<!--  <tr>-->
+    <%# @writing_outlets.each do |outlet| %>
+<!--      <th><%#= outlet.title %></th>-->
+    <%# end %>
+<!--  </tr>-->
+<!--    <tr>-->
+      <%# @writing_outlets.each do |outlet| %>
+<!--        <td><%#= outlet.content %></td>-->
+      <%# end %>
+<!--    </tr>-->
+<!--</table>-->

@@ -83,4 +83,20 @@ RSpec.describe "WritingOutlets", type: :request do
       end
     end
   end
+
+  describe "GET /index" do
+    let!(:writing_outlets) { create_list(:writing_outlet, 20) }
+
+    before { get writing_outlets_path } # Ensure request happens after data is created
+
+    it "renders the index template" do
+      expect(response).to render_template(:index)
+    end
+
+    context "when many writing outlets exist" do
+      it "displays a list of outlets" do
+        expect(response.body).to include("Sample Title")
+      end
+    end
+  end
 end

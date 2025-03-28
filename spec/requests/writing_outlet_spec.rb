@@ -1,6 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe "WritingOutlets", type: :request do
+  let(:author) { create(:author) }
+  let!(:writing_outlet) { create(:writing_outlet, author: author) }
+
+  before do
+    sign_in author
+  end
+
   describe "GET /new" do
     it "renders a successful response" do
       get new_writing_outlet_path
@@ -49,8 +56,6 @@ RSpec.describe "WritingOutlets", type: :request do
   end
 
   describe "GET /show" do
-    let!(:writing_outlet) { WritingOutlet.create(title: "My Title", content: "Some Content") }
-
     context "with valid parameters" do
       before { get writing_outlet_path(writing_outlet.id) }
 
@@ -63,11 +68,11 @@ RSpec.describe "WritingOutlets", type: :request do
       end
 
       it "displays the writing outlet title" do
-        expect(response.body).to include("My Title")
+        expect(response.body).to include("Sample Title")
       end
 
       it "displays the writing outlet content" do
-        expect(response.body).to include("Some Content")
+        expect(response.body).to include("Sample Content")
       end
     end
 

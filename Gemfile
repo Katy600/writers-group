@@ -5,6 +5,8 @@ ruby "3.3.5"
 
 gem 'bigdecimal'
 
+gem 'devise'
+
 gem 'ostruct'
 
 gem 'mutex_m'
@@ -56,6 +58,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'rspec-rails', '~> 6.0'
   gem 'pry'
+  gem 'factory_bot_rails'
 end
 
 group :development do

@@ -1,3 +1,8 @@
+Given("I am signed in as an author") do
+  FactoryBot.create(:author)
+  sign_in author
+end
+
 Given("a writing outlet exists") do
   @writing_outlet = FactoryBot.create(:writing_outlet)
 end
@@ -32,4 +37,8 @@ Then("I should see a list of writing outlets") do
   # Check that the titles of the writing outlets are displayed on the index page
   expect(page).to have_content(@writing_outlet1.title)
   expect(page).to have_content(@writing_outlet2.title)
+end
+
+When("I click {string} link") do |link|
+  click_link link
 end

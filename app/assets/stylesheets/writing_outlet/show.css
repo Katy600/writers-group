@@ -40,4 +40,11 @@
             transparent 1lh
     );
     box-shadow: 0 0 1rem rgb(0 0 0 / 0.25);
+
+    p {
+        font-size:  26px;
+        font-family: "American Typewriter";
+    }
 }
+
+

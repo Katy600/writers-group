@@ -1,32 +1,19 @@
-<h1>Your writing outlets so far...</h1>
-
-<% if @writing_outlets.any? %>
-  <ul class="level1">
+<div class="w3-grid" style="grid-template-columns:auto auto auto; gap:2px">
+  <% if @writing_outlets.any? %>
     <% @writing_outlets.each do |outlet| %>
-      <li>
-        <table>
-          <tr>
-            <th><%= outlet.title %></th>
-          </tr>
-          <td>
-            <%= outlet.content %>
-          </td>
-        </table>
-      </li>
+      <div class="w3-padding">
+        <div class="w3-card-4 w3-center">
+          <h2>
+            <%= link_to outlet.title.upcase.truncate(20), writing_outlet_path(outlet.id) %>
+          </h2>
+          <%= image_tag 'girl-writing.png', alt: 'girl writing', style: 'width:70%' %>
+          <div class="w3-container w3-center">
+            <p><%= outlet.content.truncate(150) %></p>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </ul>
-<% end %>
-
-
-<!--<table>-->
-<!--  <tr>-->
-    <%# @writing_outlets.each do |outlet| %>
-<!--      <th><%#= outlet.title %></th>-->
-    <%# end %>
-<!--  </tr>-->
-<!--    <tr>-->
-      <%# @writing_outlets.each do |outlet| %>
-<!--        <td><%#= outlet.content %></td>-->
-      <%# end %>
-<!--    </tr>-->
-<!--</table>-->
+  <% else %>
+    <p>No writing outlets available.</p>
+  <% end %>
+</div>

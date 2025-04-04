@@ -15,6 +15,8 @@ class WritingOutletsController < ApplicationController
   end
 
   def create
+    @writing_outlet = WritingOutlet.new(writing_outlet_params)
+    @writing_outlet.author = current_author
     @writing_outlet = current_author.writing_outlets.build(writing_outlet_params)
 
       if @writing_outlet.save

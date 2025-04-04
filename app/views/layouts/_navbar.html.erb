@@ -2,7 +2,13 @@
 <nav class="nav-bar">
   <div class="icon-nav">
     <i class="fas fa-moon"></i>
-    <span class="logo">Your logo</span>
+    <span class="logo">
+    <% if current_author %>
+        <%= button_to "logout", destroy_author_session_path, method: :delete  %>
+    <% else %>
+      <%= link_to 'Login', new_author_session_path, method: :create %>
+    <% end %>
+    </span>
   </div>
 
   <ul class="list-nav-bar active">

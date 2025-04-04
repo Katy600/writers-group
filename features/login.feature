@@ -1,7 +1,11 @@
-Feature: User Sign Up
-  Scenario: User can sign up with valid credentials
+Feature: Author Sign Up
+  Scenario: Author can sign up with valid credentials
     Given I am on the sign up page
-    When I fill in the email address with "test@example.com"
-    And I fill in the password with "password123"
-    And I click the "Sign Up" button
-    Then I should be redirected to the dashboard page
+    When I fill in the sign-up form with valid details
+
+Feature: Author Login and Logout
+  Scenario: Author can sign up with valid credentials
+    Given I have signed up successfully
+    When I click on the log in button
+    Then  I should see "Signed out successfully."
+

@@ -100,7 +100,7 @@ RSpec.describe "WritingOutlets", type: :request do
 
     context "when many writing outlets exist" do
       it "displays a list of outlets" do
-        expect(response.body).to include("Sample Title")
+        expect(response.body).to include("SAMPLE TITLE")
       end
     end
   end

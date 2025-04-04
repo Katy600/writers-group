@@ -1,14 +1,14 @@
-<div class="w3-grid" style="grid-template-columns:auto auto auto; gap:2px">
+<div class="w3-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(200px, auto); gap: 2px;">
   <% if @writing_outlets.any? %>
     <% @writing_outlets.each do |outlet| %>
       <div class="w3-padding">
         <div class="w3-card-4 w3-center">
           <h2>
-            <%= link_to outlet.title.upcase.truncate(20), writing_outlet_path(outlet.id) %>
+            <%= link_to outlet.title.upcase.truncate(15), writing_outlet_path(outlet.id) %>
           </h2>
-          <%= image_tag 'girl-writing.png', alt: 'girl writing', style: 'width:70%' %>
+          <%= image_tag 'girl-writing.png', alt: 'girl writing', style: 'width:60%' %>
           <div class="w3-container w3-center">
-            <p><%= outlet.content.truncate(150) %></p>
+            <p><%= outlet.content.truncate(45)%></p>
           </div>
         </div>
       </div>

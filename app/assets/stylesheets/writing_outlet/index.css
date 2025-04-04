@@ -8,8 +8,9 @@ p {
 }
 
 h2 {
-    font-size:  35px;
+    font-size:  30px;
     font-family: "American Typewriter";
+    padding: 0;
 }
 
 p {

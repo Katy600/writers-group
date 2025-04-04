@@ -13,6 +13,11 @@
 # it.
 require_relative 'rails_helper'
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+# spec_helper.rb or test_helper.rb
+require 'simplecov'
+SimpleCov.start
+
 RSpec.configure do |config|
   config.include Devise::Test::IntegrationHelpers, type: :request
   # rspec-expectations config goes here. You can use an alternate
